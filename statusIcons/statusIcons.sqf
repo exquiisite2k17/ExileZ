@@ -93,7 +93,7 @@
 		_icon
 	};
 	sb_getIconHunger = {
-		_value = _this select 1;
+		_value = _this select 0;
 		_icon = "hunger100";
 		
 		if (_value >= 100 ) then 					{ _icon ="hunger100";	};
@@ -105,7 +105,7 @@
 		_icon
 	};
 	sb_getIconThirst = {
-		_value = _this select 2;
+		_value = _this select 0;
 		_icon = "thirst100";
 		
 		if (_value >= 100 ) then 					{ _icon ="thirst100";	};
@@ -168,17 +168,17 @@
 		_display = (uiNamespace getVariable "StatusIcons");
 		
 		if (_iconh != "-1") then {
-			(_display displayCtrl 13392) ctrlSetText format["statusIcons\circlebar\%1.paa",_iconh];
+			(_display displayCtrl 13392) ctrlSetText format["statusIcons\circlebar\blood\%1.paa",_iconh];
 			[(_display displayCtrl 13392)] call sb_fadeIn;
 		};
 		
 		if (_iconf != "-1") then {
-			(_display displayCtrl 13393) ctrlSetText format["statusIcons\circlebar\%1.paa",_iconf];
+			(_display displayCtrl 13393) ctrlSetText format["statusIcons\circlebar\hunger\%1.paa",_iconf];
 			[(_display displayCtrl 13393)] call sb_fadeIn;
 		};
 		
 		if (_iconw != "-1") then {
-			(_display displayCtrl 13394) ctrlSetText format["statusIcons\circlebar\%1.paa",_iconw];
+			(_display displayCtrl 13394) ctrlSetText format["statusIcons\circlebar\thirst\%1.paa",_iconw];
 			[(_display displayCtrl 13394)] call sb_fadeIn;
 		};
 		
