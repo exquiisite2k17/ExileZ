@@ -250,8 +250,8 @@
 			_toUpdateHealth = [0,0,0];
 			for "_i" from 0 to 2 do
 			{
-				_last = [(_lastArray select _i)] call sb_getIconHealth;
-				_cur = [(_currentArray select _i)] call sb_getIconHealth;
+				_last = [(_lastArray select _i)] call sb_getIconBlood;
+				_cur = [(_currentArray select _i)] call sb_getIconBlood;
 				
 				if (_last != _cur) then {
 					_toUpdateHealth set [_i,1];
